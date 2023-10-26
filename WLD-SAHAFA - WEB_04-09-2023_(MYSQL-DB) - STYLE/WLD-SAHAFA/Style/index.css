@@ -1,0 +1,275 @@
+.mainContainer {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden !important;
+    padding: 30px 30px;
+    background-color: #ebf7ff;
+}
+
+.marquee {
+    padding-top: 10px;
+    color: #007bff;
+    font-weight: 500;
+    font-size: 30px;
+    white-space: nowrap;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.text {
+    display: inline-block;
+    animation: marquee 10s linear infinite;
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(300%);
+    }
+
+    40% {
+        transform: translateX(0);
+    }
+
+    60% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-300%);
+    }
+}
+
+.contentContainer {
+    width: 70vw;
+}
+
+.unOrderedList {
+    list-style-type: none;
+    margin-right: 20px;
+    padding-inline-start: 0px;
+    display: flex;
+    flex-direction: column;
+}
+
+.unOrderedList li {
+    margin: 0px 0px 15px 0px;
+    padding: 10px;
+    color: white;
+    border-radius: 6px;
+    width: 250px;
+    height: 70px;
+    font-weight: bold;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow:
+        0 4px 8px 0 rgba(0, 0, 0, 0.2),
+        0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.itemsContainer {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.secondaryList li {
+    width: 180px;
+}
+
+.listHeader {
+    width: 90% !important;
+    margin: 0px !important;
+    align-self: center !important;
+    color: #007bff !important;
+    height: 60px !important;
+    font-size: 18px !important;
+    font-weight: 500 !important;
+    line-height: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px !important;
+    border-bottom-left-radius: 0px !important;
+    border-bottom-right-radius: 0px !important;
+    padding-bottom: 0px !important;
+    border: 2.5px solid #b6b6f6 !important;
+}
+
+.listHeader h5 {
+    font-weight: bold;
+}
+
+.ticketNumberBox {
+    font-size: 30px;
+    border-radius: 7px;
+    text-align: center;
+    border-right: 2.5px solid #b6b6f6;
+}
+
+.FooterContainer {
+    position: absolute;
+    bottom: 20px;
+    width: 50%;
+}
+
+.ticketNumberBox {
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 10px 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.customTicketContainerDiv {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    border-radius: 15px;
+    width: calc(100% - 20px);
+    bottom: -18px;
+    position: relative;
+    font-weight: bold initial;
+}
+
+.customCounterContainerDiv {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    border-radius: 15px;
+    width: 250px;
+    width: calc(100% - 20px);
+    bottom: -18px;
+    position: relative;
+}
+
+.counterCont {
+    width: 40%;
+}
+
+.ticketNumberCont {
+    width: 60%;
+}
+
+.logoImg {
+    width: 100px;
+    height: 70px;
+}
+
+.headerContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.customCarousel {
+    width: 90%;
+    border-radius: 10px;
+    top: 5%;
+}
+.ticketNumberBox h1 {
+    font-weight: bold;
+}
+@media screen and (max-height: 800px) {
+    .customCarousel {
+        width: 80%;
+    }
+
+    .unOrderedList li {
+        height: 50px;
+    }
+
+    .contentContainer {
+        padding-left: 100px;
+    }
+
+    .itemsContainer {
+        padding-right: 60px;
+    }
+}
+
+@media screen and (min-width: 1900px) {
+    .unOrderedList li {
+        width: 500px;
+        height: 80px;
+        font-size: 50px;
+        font-weight: bold;
+    }
+
+    .secondaryList li {
+        width: 300px;
+    }
+
+    .listHeader {
+        height: 90px !important;
+        font-size: 30px !important;
+        line-height: 20px !important;
+    }
+    .listHeader h5 {
+        font-size: 40px !important;
+    }
+    .listHeader p {
+        padding-bottom: 0px !important;
+        margin-bottom: 10px !important;
+    }
+    .customTicketContainerDiv,
+    .customCounterContainerDiv {
+        height: 70px;
+    }
+    .customTicketContainerDiv h5,
+    .customCounterContainerDiv h5 {
+        font-size: 40px;
+    }
+    .ticketNumberBox {
+        height: 200px;
+    }
+    .ticketNumberBox h1 {
+        font-size: 70px;
+    }
+    .logoImg {
+        width: 150px;
+        height: 150px;
+    }
+    .marquee {
+        font-size: 50px;
+    }
+    .FooterContainer {
+        bottom: 50px;
+    }
+    @keyframes marquee {
+        0% {
+            transform: translateX(400%);
+        }
+
+        40% {
+            transform: translateX(0);
+        }
+
+        60% {
+            transform: translateX(0);
+        }
+
+        100% {
+            transform: translateX(-400%);
+        }
+    }
+}
+.blink {
+    color: black;
+    animation: blink 1s linear infinite alternate 0s;
+}
+
+@keyframes blink {
+    50% {
+        color: red;
+    }
+
+    100% {
+        color: black;
+    }
+}

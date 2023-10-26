@@ -1,0 +1,47 @@
+﻿body 
+{
+
+}
+
+.small-logo {
+    width: 80px; /* Set the desired width for the small logo */
+    margin-top: 10px;
+    margin-bottom:20px;
+    height: auto; /* Maintain aspect ratio */
+}
+
+.box {
+    width: 100%;
+    background-color: #f0f0f0; /* Adjust background color as needed */
+    padding: 10px; /* Adjust padding as needed */
+    margin-bottom: 10px; /* Adjust spacing between boxes as needed */
+    text-align: center;
+    font-size: 28px;
+    border-radius: 15px; /* Add rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+    font-weight: bold; /* Make the font bold */
+}
+
+.box-Heading 
+{
+    width: 100%;
+    padding: 10px; /* Adjust padding as needed */
+    font-family: Times New Roman, Times, serif; /* Change font style to Times New Roman */
+    font-size: 28px;
+    text-align: center;
+    background-color: #bbdefb; /* Light blue background color */
+    padding: 20px;
+    margin-top: 10px;
+    margin-right: 5px; /* Adjust the margin between boxes */
+    border-radius: 15px; /* Add rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+    font-weight: bold; /* Make the font bold */
+}
+
+#videoPlayer {
+    max-width: 100%;
+    max-height: 100%;
+    display: flex;
+    align-items: center; /* Vertical centering */
+}
+

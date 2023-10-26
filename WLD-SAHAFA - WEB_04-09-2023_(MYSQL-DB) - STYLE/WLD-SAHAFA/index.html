@@ -1,0 +1,115 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Waiting List Display</title>
+    <link rel="stylesheet" href="bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="Style/index.css">
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="Scripts/popper.min.js"></script>
+    <script src="Scripts/bootstrap.min.js"></script>
+    <script src="Scripts/Script.js"></script>
+    <script src="Scripts/WebApi.js"></script>
+</head>
+
+<body>
+    <div class="mainContainer">
+        <div class="headerContainer">
+            <img src="IMAGES/COMPANY_LOGO/LOGO3.png"
+                 alt="logoImg" class="logoImg" />
+            <div class="marquee">
+                <div class="text">Your Text Goes Here Your Text Goes Here Your Text Goes Here Your Text Goes Here</div>
+            </div>
+        </div>
+        <div class="d-flex pt-3">
+            <div class="contentContainer">
+                <div id="carouselExample" class="carousel slide customCarousel" data-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active rounded">
+                            <video width="100%" height="100%" autoplay muted loop>
+                                <source src="./resources/assets/file_example_MP4_480_1_5MG.mp4" type="video/mp4">
+                                <source src="./resources/assets/file_example_MP4_480_1_5MG.mp4" type="video/ogg">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                        <div class="carousel-item">
+                            <video width="100%" height="100%" autoplay muted loop class="rounded">
+                                <source src="./resources/assets/sample-30s.mp4" type="video/mp4">
+                                <source src="./resources/assets/sample-30s.mp4" type="video/ogg">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                        <div class="carousel-item">
+                            <video width="100%" height="100%" autoplay muted loop>
+                                <source src="./resources/assets/sample-5s.mp4" type="video/mp4">
+                                <source src="./resources/assets/sample-5s.mp4" type="video/ogg">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#carouselExample" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExample" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+                <div class="FooterContainer text-primary d-flex justify-content-between">
+                    <div class='ticketNumberCont mr-4'>
+                        <div class="bg-primary text-white customTicketContainerDiv">
+                            <h5>Ticket number</h5>
+                            <h5>رقم التذكرة</h5>
+                        </div>
+                        <div class="ticketNumberBox blink">
+                            <h1 id="latestTicket"></h1>
+                        </div>
+                    </div>
+                    <div class='counterCont mr-4'>
+                        <div class="bg-primary text-white customCounterContainerDiv">
+                            <h5>Counter</h5>
+                            <h5>عداد</h5>
+                        </div>
+                        <div class=" ticketNumberBox blink">
+                            <h1 id="latestCounter"></h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="itemsContainer">
+                <ul class="unOrderedList">
+                    <li class="listHeader border border-primary">
+                        <p>رقم التذكرة</p>
+                        <h5 class="fw-bold mb-0">TICKET NUMBER</h5>
+                    </li>
+                    <li id='t1' class="bg-primary"></li>
+                    <li id='t2' class="bg-primary"></li>
+                    <li id='t3' class="bg-primary"></li>
+                    <li id='t4' class="bg-primary"></li>
+                    <li id='t5' class="bg-primary"></li>
+                    <li id='t6' class="bg-primary"></li>
+                    <li id='t7' class="bg-primary"></li>
+                    <li id='t8' class="bg-primary"></li>
+                </ul>
+                <ul class="unOrderedList secondaryList">
+                    <li class="listHeader border border-primary">
+                        <p>عداد</p>
+                        <h5 class="fw-bold mb-0">COUNTER</h5>
+                    </li>
+                    <li  id='c1' class="bg-primary"></li>
+                    <li  id='c2' class="bg-primary"></li>
+                    <li  id='c3' class="bg-primary"></li>
+                    <li  id='c4' class="bg-primary"></li>
+                    <li  id='c5' class="bg-primary"></li>
+                    <li  id='c6' class="bg-primary"></li>
+                    <li  id='c7' class="bg-primary"></li>
+                    <li  id='c8' class="bg-primary"></li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>
