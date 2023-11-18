@@ -1,4 +1,6 @@
 ﻿let voices = window.speechSynthesis.getVoices();
+let blinkTimeout;
+
 window.speechSynthesis.onvoiceschanged = () => {
     voices = window.speechSynthesis.getVoices();
 };
@@ -47,6 +49,18 @@ function SetCounterDetails(counterDetails) {
     });
 }
 function SetLatestCounterDetails(counter) {
+    if (counter == null)
+        return;
     $('#latestCounter').html(counter.CounterNo);
     $('#latestTicket').html(counter.ReceiptNo);
+    $(".ticketNumberBox").addClass("blink");
+    CheckInterval();
 }
+function CheckInterval() {
+    clearInterval(blinkTimeout);
+    blinkTimeout = setInterval(function () {
+        $(".ticketNumberBox").removeClass("blink");
+        clearInterval(blinkTimeout);
+    }, 5000);
+}
+ 

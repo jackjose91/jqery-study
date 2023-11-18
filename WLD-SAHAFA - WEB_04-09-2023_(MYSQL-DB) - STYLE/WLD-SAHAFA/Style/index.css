@@ -21,12 +21,12 @@
 
 .text {
     display: inline-block;
-    animation: marquee 10s linear infinite;
+    animation: marquee 10s ease-in-out infinite;
 }
 
 @keyframes marquee {
     0% {
-        transform: translateX(300%);
+        transform: translateX(320%);
     }
 
     40% {
@@ -38,46 +38,68 @@
     }
 
     100% {
-        transform: translateX(-300%);
+        transform: translateX(-320%);
     }
 }
 
 .contentContainer {
-    width: 70vw;
-}
-
-.unOrderedList {
-    list-style-type: none;
-    margin-right: 20px;
-    padding-inline-start: 0px;
+    width: 60%;
     display: flex;
     flex-direction: column;
 }
 
-.unOrderedList li {
-    margin: 0px 0px 15px 0px;
-    padding: 10px;
-    color: white;
-    border-radius: 6px;
-    width: 250px;
-    height: 70px;
-    font-weight: bold;
-    font-size: 30px;
+.unOrderedList1 {
+    list-style-type: none;
+    padding-inline-start: 0px;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    box-shadow:
-        0 4px 8px 0 rgba(0, 0, 0, 0.2),
-        0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    width: 60%;
+    flex-direction: column;
+    padding-left: 30px;
+    padding-right: 20px;
 }
+
+    .unOrderedList1 li {
+        margin: 0px 0px 15px 0px;
+        padding: 10px;
+        color: white;
+        border-radius: 6px;
+        width: 100%;
+        height: 90px;
+        font-weight: bold;
+        font-size: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+
+.unOrderedList2 {
+    list-style-type: none;
+    padding-inline-start: 0px;
+    display: flex;
+    width: 40%;
+    flex-direction: column;
+}
+
+    .unOrderedList2 li {
+        margin: 0px 0px 15px 0px;
+        padding: 10px;
+        color: white;
+        border-radius: 6px;
+        width: 100%;
+        height: 90px;
+        font-weight: bold;
+        font-size: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
 
 .itemsContainer {
     display: flex;
     justify-content: flex-end;
-}
-
-.secondaryList li {
-    width: 180px;
+    width: 40%;
 }
 
 .listHeader {
@@ -100,9 +122,9 @@
     border: 2.5px solid #b6b6f6 !important;
 }
 
-.listHeader h5 {
-    font-weight: bold;
-}
+    .listHeader h5 {
+        font-weight: bold;
+    }
 
 .ticketNumberBox {
     font-size: 30px;
@@ -113,8 +135,8 @@
 
 .FooterContainer {
     position: absolute;
-    bottom: 20px;
-    width: 50%;
+    bottom: 30px;
+    width: 60%;
 }
 
 .ticketNumberBox {
@@ -128,6 +150,7 @@
 .customTicketContainerDiv {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding: 10px 20px;
     border-radius: 15px;
     width: calc(100% - 20px);
@@ -139,6 +162,7 @@
 .customCounterContainerDiv {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding: 10px 20px;
     border-radius: 15px;
     width: 250px;
@@ -168,41 +192,40 @@
 }
 
 .customCarousel {
-    width: 90%;
+    width: 100%;
     border-radius: 10px;
     top: 5%;
+    align-self: center;
 }
+
 .ticketNumberBox h1 {
     font-weight: bold;
 }
+
 @media screen and (max-height: 800px) {
     .customCarousel {
-        width: 80%;
+        width: 100%;
+        height: auto;
+        top: 0%;
     }
 
-    .unOrderedList li {
-        height: 50px;
+    .unOrderedList1 li,
+    .unOrderedList2 li {
+        height: 80px;
     }
 
-    .contentContainer {
-        padding-left: 100px;
-    }
-
-    .itemsContainer {
-        padding-right: 60px;
+    .FooterContainer {
+        width: 60%;
+        bottom: 20px;
     }
 }
 
 @media screen and (min-width: 1900px) {
-    .unOrderedList li {
-        width: 500px;
-        height: 80px;
+    .unOrderedList1 li,
+    .unOrderedList2 li {
+        height: 110px;
         font-size: 50px;
         font-weight: bold;
-    }
-
-    .secondaryList li {
-        width: 300px;
     }
 
     .listHeader {
@@ -210,37 +233,51 @@
         font-size: 30px !important;
         line-height: 20px !important;
     }
-    .listHeader h5 {
-        font-size: 40px !important;
-    }
-    .listHeader p {
-        padding-bottom: 0px !important;
-        margin-bottom: 10px !important;
-    }
+
+        .listHeader h5 {
+            font-size: 40px !important;
+        }
+
+        .listHeader p {
+            padding-bottom: 0px !important;
+            margin-bottom: 10px !important;
+        }
+
     .customTicketContainerDiv,
     .customCounterContainerDiv {
         height: 70px;
     }
-    .customTicketContainerDiv h5,
-    .customCounterContainerDiv h5 {
-        font-size: 40px;
-    }
+
+        .customTicketContainerDiv h5,
+        .customCounterContainerDiv h5 {
+            font-size: 40px;
+        }
+
     .ticketNumberBox {
-        height: 200px;
+        height: 165px;
     }
-    .ticketNumberBox h1 {
-        font-size: 70px;
+
+        .ticketNumberBox h1 {
+            font-size: 70px;
+        }
+
+    .customCarousel {
+        top: 0%;
     }
+
     .logoImg {
         width: 150px;
         height: 150px;
     }
+
     .marquee {
         font-size: 50px;
     }
+
     .FooterContainer {
-        bottom: 50px;
+        bottom: 20px;
     }
+
     @keyframes marquee {
         0% {
             transform: translateX(400%);
@@ -259,6 +296,72 @@
         }
     }
 }
+
+@media screen and (min-width: 3000px) {
+    .mainContainer {
+        padding: 3%;
+    }
+
+    .unOrderedList1 li,
+    .unOrderedList2 li {
+        height: 250px;
+        font-size: 140px;
+        font-weight: bold;
+        border-radius: 20px;
+    }
+
+    .listHeader {
+        height: 200px !important;
+        line-height: 80px !important;
+    }
+
+        .listHeader h5 {
+            font-size: 70px !important;
+        }
+
+        .listHeader p {
+            padding-bottom: 0px !important;
+            font-size: 60px;
+            margin-bottom: 10px !important;
+        }
+
+    .FooterContainer {
+        bottom: 60px;
+        width: calc(57% - 50px);
+    }
+
+    .customTicketContainerDiv,
+    .customCounterContainerDiv {
+        height: 180px;
+        border-radius: 20px;
+    }
+
+        .customTicketContainerDiv h5,
+        .customCounterContainerDiv h5 {
+            font-size: 80px;
+        }
+
+    .ticketNumberBox {
+        height: 350px;
+        border-radius: 20px;
+    }
+
+        .ticketNumberBox h1 {
+            font-size: 200px;
+        }
+
+    .marquee {
+        font-size: 100px;
+    }
+
+    .headerContainer {
+        margin-bottom: 50px;
+    }
+
+    .contentContainer {
+        margin-right: 100px;
+    }
+}
 .blink {
     color: black;
     animation: blink 1s linear infinite alternate 0s;
@@ -273,3 +376,4 @@
         color: black;
     }
 }
+

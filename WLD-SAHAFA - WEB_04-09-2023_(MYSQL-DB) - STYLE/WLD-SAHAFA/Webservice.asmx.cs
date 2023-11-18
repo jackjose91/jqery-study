@@ -23,7 +23,7 @@ namespace WLD_SAHAFA
         [WebMethod]
         public object GetDetails(IList<Counter> oldCounters)
         {
-            var counters = GetData();
+            var counters = GetDataTest();
             var speechText = WebserviceHelper.BuildSpeechText(oldCounters, counters);
             return new
             {
@@ -38,5 +38,37 @@ namespace WLD_SAHAFA
             using (var _context = new DatabaseContextMySql())
                 return _context.GetDataTable<Counter>(QueryConstants.GetCounterDetails);
         }
+
+        private IList<Counter> GetDataTest()
+        {
+            return new List<Counter>
+            {
+                new Counter(){ 
+                CounterNo=1,
+                ReceiptNo=1
+                },
+                new Counter(){
+                CounterNo=2,
+                ReceiptNo=2
+                },
+                //new Counter(){
+                //CounterNo=3,
+                //ReceiptNo=3
+                //},
+                //new Counter(){
+                //CounterNo=4,
+                //ReceiptNo=4
+                //},
+                //new Counter(){
+                //CounterNo=5,
+                //ReceiptNo=5
+                //},
+                new Counter(){
+                CounterNo=new Random().Next(1,6),
+                ReceiptNo =new Random().Next(1,6),
+                },
+            };
+        }
+
     }
 }
